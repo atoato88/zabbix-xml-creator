@@ -1,0 +1,9 @@
+coverage
+.DS_Store
+*.gem
+.bundle
+Gemfile.lock
+pkg/*
+*.swp
+chef-stacktrace.out
+
