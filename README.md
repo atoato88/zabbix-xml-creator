@@ -20,13 +20,16 @@ python setup.py install
 ### resource/hosts.csv file format
 
 It assumes that created by Microsoft Excel in csv-format.  
-So, if value has comma',', it is covered with double-quote.  
+If value has comma','  it is covered with double-quote.  
 > 1,"some,thing",2,3,4,.....  
 
 And, it has no space' ' at between value and value.  
-> bad-pattern  
+
+- bad-pattern    
 > 1, 2, 3, 4, .....  
-> good-pattern  
+- good-pattern  
 > 1,2,3,4,.....  
+  
+First line in this file is used at column header.  
 
 
