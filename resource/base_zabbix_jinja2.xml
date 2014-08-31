@@ -10,7 +10,7 @@
   <hosts>
 {% for e in hosts %}    <host>
       <host>{{ e.name }}</host>
-      <name>abc123(gd1abcd001,nova-compute/0)</name>
+      <name>{{ e.display_name }}</name>
       <proxy />
       <status>0</status>
       <ipmi_authtype>-1</ipmi_authtype>
@@ -35,18 +35,18 @@
           <default>1</default>
           <type>2</type>
           <useip>1</useip>
-          <ip>192.168.1.201</ip>
+          <ip>{{ e.ip2 }}</ip>
           <dns />
-          <port>161</port>
+          <port>{{ e.port2 }}</port>
           <interface_ref>if2</interface_ref>
         </interface>
         <interface>
           <default>1</default>
           <type>1</type>
           <useip>1</useip>
-          <ip>192.168.1.201</ip>
+          <ip>{{ e.ip1 }}</ip>
           <dns />
-          <port>10050</port>
+          <port>{{ e.port1 }}</port>
           <interface_ref>if1</interface_ref>
         </interface>
       </interfaces>
