@@ -21,14 +21,14 @@ python setup.py install
 
 It assumes that created by Microsoft Excel in csv-format.  
 If value has comma','  it is covered with double-quote.  
-> 1,"some,thing",2,3,4,.....  
+<pre>1,"some,thing",2,3,4,.....</pre>
 
 And, it has no space' ' at between value and value.  
 
 - bad-pattern    
-> 1, 2, 3, 4, .....  
+<pre>1, 2, 3, 4, .....</pre> 
 - good-pattern  
-> 1,2,3,4,.....  
+<pre>1,2,3,4,.....</pre> 
   
 First line in this file is used at column header.  
 
