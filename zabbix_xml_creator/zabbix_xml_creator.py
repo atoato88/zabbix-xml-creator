@@ -1,3 +1,6 @@
+#TODO implement command line option display
+#TODO create unit test
+
 def load_hosts(path='resource/hosts.csv'):
     def _create_hash(cols, values):
         result={}
@@ -14,16 +17,16 @@ def load_hosts(path='resource/hosts.csv'):
     print results
     return results
 
-def replace_xml(path='resource', hosts=[] ):
+def replace_xml(path='resource', hosts=[]):
     from jinja2 import Environment
     from jinja2.loaders import FileSystemLoader
 
     env = Environment(loader=FileSystemLoader(path))
     tmpl = env.get_template('base_zabbix_jinja2.xml')
-    print tmpl.render(hosts=hosts)
+    return tmpl.render(hosts=hosts)
 
 def main():
-  replace_xml(hosts=load_hosts())
+  print replace_xml(hosts=load_hosts())
 
 if __name__ == '__main__':
     main()
