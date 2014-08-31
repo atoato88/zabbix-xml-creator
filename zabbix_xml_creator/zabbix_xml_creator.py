@@ -33,7 +33,7 @@ def load_hosts(path='resource/hosts.csv'):
     results = []
     columns = []
     try:
-        reader = csv.reader(open(path, 'r'))
+        reader = csv.reader(open(path, 'rb'))
     except BaseException as e:
         print e
         return results
