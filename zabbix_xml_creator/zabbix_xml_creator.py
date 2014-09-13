@@ -39,6 +39,7 @@ def load_hosts(path='resource/hosts.csv'):
         return results
     header = reader.next()
     for r in reader:
+        print r
         results.append(_create_hash(header, r))
     return results
 

@@ -5,7 +5,10 @@ zabbix-xml-creator
 
 ### Jinja2
 
-- download jinja2 module
+- git clone with command
+<pre>
+git clone https://github.com/mitsuhiko/jinja2.git
+</pre>
 - install module with command
 <pre>
 sudo -i
