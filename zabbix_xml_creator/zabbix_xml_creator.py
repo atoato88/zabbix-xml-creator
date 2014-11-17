@@ -39,7 +39,6 @@ def load_hosts(path='resource/hosts.csv'):
         return results
     header = reader.next()
     for r in reader:
-        print r
         results.append(_create_hash(header, r))
     return results
 
@@ -57,9 +56,10 @@ def replace_xml(path='resource/base_zabbix_jinja2.xml', hosts=[]):
 
 def main():
   (options, args) = parse_command()
-  hosts = load_hosts(path=options.hosts_file) if not \
+  print options
+  hosts = load_hosts(path=options.hosts_file) if \
         options.hosts_file else load_hosts()
-  output = replace_xml(path=options.base_template_file, hosts=hosts) if not \
+  output = replace_xml(path=options.base_template_file, hosts=hosts) if \
         options.base_template_file else replace_xml(hosts=hosts)
   print output
 
