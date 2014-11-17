@@ -27,7 +27,7 @@ def load_hosts(path='resource/hosts.csv'):
     def _create_hash(cols, values):
         result={}
         for i, c in enumerate(cols):
-            result[c.strip()]=values[i].strip()
+            result[c.strip()]=values[i].decode('utf-8').strip()
         return result
     import csv
     results = []
